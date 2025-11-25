@@ -23,10 +23,18 @@ search.addEventListener("click", () => {
       const desc = data.weather[0].description;
       const icon = data.weather[0].icon;
 
-      weatherBox.querySelector(".temperature").innerHTML = `${temp}°C`;
-      weatherBox.querySelector(".description").innerHTML = desc;
-      weatherBox.querySelector(
-        "img"
-      ).src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+      const card = document.createElement("div");
+      card.innerHTML = `
+      <div class="card">
+        <img src="https://openweathermap.org/img/wn/${icon}@2x.png" />
+        <div>
+          <p class="temperature">${temp}°C</p>
+          <p class="description">${desc}</p>
+        </div>
+      </div>
+      
+      `;
+      weatherBox.innerHTML = "";
+      weatherBox.appendChild(card);
     });
 });

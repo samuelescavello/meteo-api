@@ -12,6 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   background: #506adb;
+  flex-direction: column;
 }
 
 .container {
@@ -51,4 +52,15 @@ body {
   background-color: #506adb;
   border-radius: 50%;
   color: white;
+}
+
+.card {
+  width: 300px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
